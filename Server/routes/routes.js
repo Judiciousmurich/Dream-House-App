@@ -26,6 +26,7 @@ import {
   getFavorites,
   getFavoriteById,
   createFavorite,
+  updateFavorite,
   deleteFavorite
 } from '../controllers/favoritesController.js';
 
@@ -44,6 +45,14 @@ import {
   updateLocation,
   deleteLocation
 } from '../controllers/locationsController.js';
+
+import {
+  getUserRoles,
+  getUserRoleById,
+  createUserRole,
+  updateUserRole,
+  deleteUserRole
+} from '../controllers/userRolesController.js';
 
 const Routes = (app) => {
   app.route('/users')
@@ -73,23 +82,23 @@ const Routes = (app) => {
     .put(updateAgent)
     .delete(deleteAgent);
 
-  app.route('/Favorites')
+  app.route('/favorites')
     .get(getFavorites)
     .post(createFavorite);
 
-  app.route('/Favorites/:id')
-  .get(getFavoriteById)
+  app.route('/favorites/:id')
+    .get(getFavoriteById)
+    .put(updateFavorite)
     .delete(deleteFavorite);
-
 
   app.route('/inquiries')
     .get(getInquiries)
     .post(createInquiry);
 
   app.route('/inquiries/:id')
-      .get(getInquiryById)
-      .put(updateInquiry)
-      .delete(deleteInquiry);
+    .get(getInquiryById)
+    .put(updateInquiry)
+    .delete(deleteInquiry);
 
   app.route('/locations')
     .get(getLocations)
@@ -99,6 +108,15 @@ const Routes = (app) => {
     .get(getLocationById)
     .put(updateLocation)
     .delete(deleteLocation);
+
+  app.route('/user-roles')
+    .get(getUserRoles)
+    .post(createUserRole);
+
+  app.route('/user-roles/:id')
+    .get(getUserRoleById)
+    .put(updateUserRole)
+    .delete(deleteUserRole);
 };
 
 export default Routes;
