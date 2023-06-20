@@ -1,0 +1,23 @@
+.blog {
+    padding: 2rem;
+  }
+  
+  .blog h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .blog p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  
+  .blog ul {
+    list-style: disc;
+    margin-left: 2rem;
+  }
+  
+  .blog li {
+    margin-bottom: 0.5rem;
+  }
+  
