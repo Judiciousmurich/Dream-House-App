@@ -1,6 +1,15 @@
 .about {
   margin-bottom: 80px;
 }
+.about .title {
+  background-image: url('../images/abt-1.jfif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff; /* Set the text color for better visibility */
+  padding: 20px; /* Add padding to create space around the text */
+}
+
 
 .about .container {
   display: flex;
