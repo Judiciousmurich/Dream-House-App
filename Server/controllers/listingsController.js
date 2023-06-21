@@ -36,6 +36,7 @@ export const getListings = async (req, res) => {
     }
   };
   
+  
   // Create a new listing
   export const createListing = async (req, res) => {
     const { title, description, price, location, images, amenities } = req.body;
