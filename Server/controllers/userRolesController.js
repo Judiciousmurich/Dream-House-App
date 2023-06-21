@@ -80,7 +80,7 @@ export const updateUserRole = async (req, res) => {
   }
 };
 
-// Delete a user role
+// Delete a user role.
 export const deleteUserRole = async (req, res) => {
   try {
     const roleId = req.params.id;
@@ -101,3 +101,4 @@ export const deleteUserRole = async (req, res) => {
     sql.close(); // Close the SQL connection
   }
 };
+
