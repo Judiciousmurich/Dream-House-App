@@ -1,0 +1,141 @@
+
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+} */
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100% ;
+  height: 90vh;
+  background: url('../images//bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation:animateBg 5s linear infinite;
+}
+@keyframes animateBg{
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+
+
+.login-box{
+  position: relative;
+  width: 400px;
+  height: 450px;
+  background:transparent;
+  border: 2px solid  rgba(255, 255, 255, .5);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(15px);
+}
+
+
+h2{
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+.input-box{
+  position: relative;
+border-bottom:2px solid #fff ;
+  width: 310px;
+  margin: 30px 0;
+}
+
+.input-box label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50px);
+  font-size: 1rem;
+  color: white;
+  pointer-events: none;
+  transition: .5s;
+}
+.input-box input{
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline:none;
+  color:#fff;
+  font-size: 1rem;
+  padding: 0 35px 5px;
+}
+.input-box .icon{
+ position: absolute;
+ right: 8px;
+ color: #fff;
+ font-size: 12px;
+ line-height: 57px;
+
+}
+.box form .inputBox input:valid ~ label,
+.box form .inputBox input:valid ~ label{
+top: -5px;
+
+}
+.remember-forgot{
+  margin: -15px 0 15px;
+  font-size: 12px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.remember-forgot label input{
+  margin-right: 3px;
+}
+.remember-forgot a{
+  color: #fff;
+  text-decoration: none;
+}
+.remember-forgot a:hover{
+  text-decoration: underline;
+}
+button{
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 40px;
+  font-size: 12px;
+  color: #000;
+  font-weight: 500;
+
+}
+.register-link{
+  font-size: 1 rem;
+  color: #fff;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+.register-link p a{
+  color:#fff ;
+  text-decoration: none;
+  font-weight: 600;
+}
+.register-link p a:hover{
+  text-decoration: underline;
+}
+@media (max-width:360px) {
+  .login-box{
+    width: 100%;
+    height:100vh;
+    border: none;
+    border-radius: 0px;
+  }
+  .input-box{
+    width: 290px;
+  }
+}

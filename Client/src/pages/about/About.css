@@ -1,0 +1,118 @@
+/* .about {
+    position: relative;
+  }
+  
+  .about-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 70px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 10px auto;
+
+
+  }
+  
+  .left {
+    flex: 0 0 50%;
+  
+    padding: 50px 0;
+  }
+  
+  .right {
+    flex: 0 0 50%;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    height: 40vh;
+    margin-top: -1%;
+    
+    background-size: cover;
+    background-image: url(../images/about_2.jpg);
+  }
+  .title-1{
+    text-align: center;
+    position: relative;
+    top:-70px ;
+    left :9%
+    }
+
+  
+  
+  .subtitle {
+    display: block;
+    width: auto;
+    max-width: 80vw;
+    line-height: normal;
+    letter-spacing:.01em;
+    word-break: break-word;
+    white-space: pre-wrap;
+    overflow-x: hidden;
+    opacity: 0.8;
+    transition: all ease-in-out 3s;
+    font-family:'Roboto', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: x-large;
+
+    text-align: center;
+    margin-top: -7%;
+    display: block;
+    transform: rotate(1deg);
+    animation: moveUp 1s infinite alternate cubic-bezier(.5, -.2,.5
+    , 1.2) forwards;
+    }
+    
+
+  
+  
+  
+  p {
+    margin-bottom: 16px;
+    color: black;
+    margin: 10px;
+    width: auto;
+    height:auto;
+    line-height:normal;
+    letter-spacing: normal;
+    word-break: keep-all;
+    white-space:pre-line;
+    overflow-wrap: break-word;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    max-width:98%;
+    min-width:3em;
+    box-sizing:border-box;
+    
+  font-family:"Times New Roman", Times, serif;
+    text-align:justify;
+    vertical-align:top;
+    display:inline-block;
+    position:relative;
+    z-index:-1;
+    }
+  
+  
+  .btn2 {
+    padding: 12px 24px;
+    background-color: #a5aba5;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .btn2 :hover{
+    opacity:.7;
+    transition: all.3s ease-in-out;
+    transform: scale(1);
+    filter: brightness(.6) contrast(1.2);
+    outline:none;
+    }
+
+   */

@@ -1,15 +1,30 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import config from './db/config.js';
-import userRoutes from './routes/routes.js';
+import Routes from './routes/routes.js';
+import jwt from 'jsonwebtoken'
+import cors from 'cors'
 
 const app = express();
+app.use(cors());
 //middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
+//jwt middleware
+app.use((req, res, next) => {
+    if (req.headers && req.headers.authorization && req.headers.authorization.split(' ')[0] === 'JWT') {
+        jwt.verify(req.headers.authorization.split(' ')[1], config.jwt_secret, (err, decode) => {
+            if (err) req.user = undefined;
+            req.user = decode;
+            next();
+        });
+    } else {
+        req.user = undefined;
+        next();
+    }
+});
 // my-routes
-userRoutes(app);
+    Routes(app);
 
 app.get('/', (req, res) => {
     res.send("Efficient,Comprehensive,User-friendly Real-Esate API!");

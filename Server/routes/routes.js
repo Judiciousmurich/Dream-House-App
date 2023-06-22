@@ -54,15 +54,16 @@ import {
   deleteUserRole
 } from '../controllers/userRolesController.js';
 
+import { login, Register, loginRequired } from '../controllers/auth.js'
 const Routes = (app) => {
   app.route('/users')
-    .get(getUsers)
-    .post(createUser);
+    .get(loginRequired, getUsers)
+    .post(loginRequired, createUser);
 
   app.route('/users/:id')
-    .get(getUserById)
-    .put(updateUser)
-    .delete(deleteUser);
+    .get(loginRequired, getUserById)
+    .put(loginRequired, updateUser)
+    .delete(loginRequired, deleteUser);
 
   app.route('/listings')
     .get(getListings)
@@ -117,6 +118,13 @@ const Routes = (app) => {
     .get(getUserRoleById)
     .put(updateUserRole)
     .delete(deleteUserRole);
-};
 
+
+// auth routes
+app.route('/auth/register')
+.post(Register);
+
+app.route('/auth/login')
+.post(login);
+};
 export default Routes;
