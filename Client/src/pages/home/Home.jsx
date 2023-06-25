@@ -1,18 +1,51 @@
-import { Link } from 'react-router-dom';
+import Listings from '../../components/listing/Listing';
 import './Home.css'
-function Home() {
+
+
+const Hero = () => {
   return (
-  <main className="home-container" id="home">
-    <div className="home-text">
-      <h1>Modern House <br/>Make Better life</h1>
-      <p>Search for apartments, houses and rooms in your area.<br/>Browse, customize, and visualize your dream house effortlessly</p>
+    <>
+    <div className="hero">
+      <div className="hero-info">
+        <h1>Discover Your Real Estate</h1>
+        <form>
+          <input className="search" type="search" placeholder="Search Location, Apartments, Complex etc" aria-label="Search" />
+          <i>
+            <button className="btn" type="submit">Search</button>
+          
+          </i>
+        </form>
+      </div>
       
-      <Link to="/search"><button type="submit" className='btn-home'>Get Started!</button></Link>
-  
-
     </div>
-  </main>
-  )
-}
+    <div className="stats">
+          <div>
+            <h1>70+</h1>
+            <p>Appartments</p>
+          </div>
+          <div>
+            <h1>300+</h1>
+            <p>Locations</p>
+          </div>
+          <div>
+            <h1>550+</h1>
+            <p>Happy Customers</p>
+          </div>
+          <div>
+            <h1>100+</h1>
+            <p>Properties Listed</p>
+          </div>
+        </div>
+        <Listings/>
 
-export default Home
+    </>
+
+
+  
+      )};
+
+  
+      
+     
+    
+export default Hero ;

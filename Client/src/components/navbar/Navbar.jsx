@@ -1,44 +1,49 @@
 
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import './Navbar.css'
+import { useContext } from 'react';
+import { Context } from '../../context/Context';
 
 const Navbar = () => {
+  const user = useContext(Context)
   return (
-    <nav className="navbar">
-      <div className="container">
-        <Link to="/" className="logo">
-          DreamHouse
-        </Link>
-        </div>
-        <ul className="nav-links">
-          <li>
-            <Link to="/" className="nav-link">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="nav-link">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="nav-link">
-              Contact Us
-            </Link>
-          </li>
-          <li>
-            <Link to="/login" className="nav-link">
-              Login
-            </Link>
-          </li>
-          <li>
-            <Link to="/register" className="nav-link">
-              Register
-            </Link>
-          </li>
-        </ul>
+  
+        <header>
+      <Link to="/" className="logo">DreamHouse</Link>
+      <nav className="navbar">
     
-    </nav>
+    {
+      user &&  <Link to="/" className='active' >
+  
+      Home
+    </Link>
+    }
+    {
+      user && <Link to="/about">
+      About
+    </Link>
+}
+{
+  user && <Link to="/contact" >
+  Contact Us
+</Link>
+
+}    
+    
+
+
+
+<Link to="/register" >
+  Register
+</Link>
+
+      </nav>
+      <div className="icons">
+        <Link to="/login" className="btn">Login</Link>
+        <i className="fas fa-bars" id="menu-bars"></i>
+      </div>
+    </header>
+
   );
 };
 

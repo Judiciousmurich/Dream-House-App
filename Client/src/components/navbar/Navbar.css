@@ -1,18 +1,70 @@
-.navbar{
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 1rem 7%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 50px;
-    height: 13vh;
-  background-color:rgb(226, 227, 228) ;
-    
-}
-.nav-links{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 40px;
-}
-.nav-link{
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+    height: 10vh;
+  }
+  
+  header .logo {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: black;
     text-decoration: none;
-}
+  }
+  
+  header .navbar a {
+    
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
+    color: rgb(75, 69, 69);
+    text-decoration: none;
+    gap: 30px;
+  }
+  
+  header .navbar a.active,
+  header .navbar a:hover {
+    color: #fff;
+    background: royalblue;
+    gap: 20px;
+  }
+  
+  header .icons a {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
+    color: white;
+    background-color: royalblue;
+    text-decoration: none;
+  }
+  
+  header .icons i {
+    cursor: pointer;
+    margin-left: 0.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    width: 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 50%;
+    background: #eee;
+  }
+  
+  header .icons i:hover {
+    color: #fff;
+    background: royalblue;
+    transform: rotate(360deg);
+  }
+  
+  header .icons #menu-bars {
+    display: none;
+  }
+  

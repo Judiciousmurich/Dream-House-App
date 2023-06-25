@@ -1,32 +1,69 @@
+import { useContext } from 'react'
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import Axios from "axios";
+import { Context } from "../../context/Context";
 import './Login.css'
 
-function Login() {
+export default  function Login() {
+  const { user ,dispatch } = useContext(Context);
+  console.log(user)
+
+  const navigate = useNavigate();
+
+  const schema = yup.object().shape({
+      username: yup.string().required("Username is required"),
+      password: yup.string().required("Password is required"),
+  });
+  const { register, handleSubmit, formState: { errors } } = useForm({
+    resolver: yupResolver(schema),
+});
+
+const onSubmit = (data) => {
+  Axios.post('http://localhost:8081/auth/login', data)
+    .then(({data}) => {
+      console.log(data)
+      if (data.token) {
+        dispatch({type:"LOGIN_SUCCESS",payload:data})
+        navigate("/")
+      }
+    })
+    .catch (({ response}) => {
+      console.log(response)
+      alert(response.data.error)
+     })
+   };
+
+ 
+
   return (
     <div className="body">
     <div className="box">
       <span className='borderLine'></span>
-      <form >
+      <form  onSubmit={handleSubmit(onSubmit)} >
         <h2>Login</h2>
         <div className="inputBox">
-          <input type="text" required="required" />
+          <input type="text" required="required" {...register("username")}/>
           <span>Username</span>
           <i></i>
         </div>
+        <p>{errors.username?.message}</p>
         <div className="inputBox">
-          <input type="password" required="required"/>
+          <input type="password" required="required" {...register("password")} />
           <span>Password</span>
           <i></i>
         </div>
+        <p>{errors.password?.message}</p>
         <div className="links">
           <a href="#">Forgot Password?</a>
           <a href="#">Sign up</a>
         
         </div>
-        <input type="submit" value="  Register" />
+        <input type="submit" value="Submit" />
       </form>
     </div>
     </div>
   )
 }
-
-export default Login

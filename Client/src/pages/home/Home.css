@@ -1,63 +1,78 @@
-main{
-  padding:4.5rem, 0.3rem ;
-}
-#home{
-  /* margin-top: 2rem; */
-  background: url(../images/home-1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 440px;
-  /* border-radius: 1.5rem; */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+.hero {
+  margin-top: 10vh;
+  height: 90vh;
+  width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      to left,
+      rgba(1, 4, 42, 0.3),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url(../images//heroimg1.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-info h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+.hero .hero-info form {
+  display: flex;
+}
+
+.hero .hero-info form .search {
+  padding: 0.9rem 1.5rem;
+  border-radius: 3rem;
+  width: 80%;
+}
+
+.hero .hero-info form .btn {
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  color: white;
+  background-color: royalblue;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 black;
+  transition: ease-out 0.5s;
+}
+
+.hero .hero-info form .btn:hover {
+  box-shadow: inset 30rem 0 0 0 black;
+  color: white;
+}
+
+
+.stats {
+  width: 100%;
+  text-align: center;
+  padding: 4rem 10%;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  box-shadow: var(--box-shadow);
+}
+
+.stats>div {
+  /*background-color: royalblue;*/
+  display: flex;
+  justify-content: space-around;
+  width: 160px;
+  text-align: center;
   align-items: center;
 }
-.home-container{
-  /* max-width: 1068px; */
-  margin-left: auto;
-  margin-right:auto;
 
-}
-.home-text{
-  padding-left:35px;
+.stats>div h1 {
   font-size: 2rem;
-  margin-left: 20%;
-  margin-left: 30%;
 }
-.home-text h1 {
-  color: white;
-  /* margin-top: 1rem; */
-  font-size: 30px;
-  /* margin-top: -9%; */
-  font-weight: lighter;
-  margin-bottom: 20%;
-  font-family: sans-serif;
-  letter-spacing: 0.5px;
-  word-spacing: 0.5px;
+
+.stats>div p {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.50);
 }
-.home-text p{
-color: white;
-font-size: 12px;
-margin-bottom: 20%;
-
-
-}
-.btn-home{
-  padding: 10px 20px;
-  width: fit-content;
-  text-align:center;
-  cursor: pointer;
-  outline: none!important;
-  box-shadow:none;
-  transition:.7s ease all;
-  margin-left: 15%;
-  border-radius: 5px;
-}
-  .btn-home:hover{
-    transform: scale(1.1) rotate(-9deg)!important;
-    filter: brightness(.9);
-    opacity:.8;
-  
-
-
-    }
