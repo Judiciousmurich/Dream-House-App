@@ -5,13 +5,14 @@ import { apiDomain } from "../../utils/utilsDomain";
 import Card from "../cards/Card";
 
 const Cards = () => {
-  const { user } = useContext(Context);
+  // const { user } = useContext(Context);
   const [cards, setCards] = useState([]);
 
   const getCards = async () => {
     try {
+      const token = JSON.parse(localStorage.getItem("user"))
       const res = await Axios.get(`${apiDomain}/listings`, {
-        headers: { Authorization: `${user.token}` },
+        headers: { Authorization: `${token}` },
       });
       setCards(res.data);
     } catch (error) {
@@ -26,7 +27,7 @@ const Cards = () => {
   return (
     <>
       {cards.map((house) => (
-        <Card key={house.id} house={house} />
+        <Card key={house.id} listing={house} />
       ))}
     </>
   );

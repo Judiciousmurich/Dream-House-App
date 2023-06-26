@@ -8,7 +8,7 @@ const Listings = () => {
     <div className="featured_listing">
       <h1>Our Featured Listings</h1>
       <div className="card">
-        { <div className="featured_listing_card">
+        {<div className="featured_listing_card">
           <img src={featuredImage1} alt="Featured Listing" />
           <div className="featured_listing_card_info">
             <div className="property_title">
@@ -20,14 +20,12 @@ const Listings = () => {
             <hr />
             <p>Dubai</p>
           </div>
-        </div> }
-        <Cards/>
+        </div>}
+        <Cards />
       </div>
       <div className="featured_btn">
         <Link to="/about" className="btn">Read More</Link>
       </div>
-      <Cards/>
-      
     </div>
 
   );

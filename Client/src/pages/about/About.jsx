@@ -1,11 +1,30 @@
 
 import { Link } from "react-router-dom";
-import profile1 from "../images/agent 1.jpg";
+
 import profile2 from "../images/agent 2.jpg";
 import goalImage from "../images/goal.png";
 import { FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { apiDomain } from "../../utils/utilsDomain";
+import { useEffect, useState } from "react";
 
 const AboutPage = () => {
+  const [agents, setAgents] = useState([])
+
+  const getAgents = async () => {
+    try {
+      const token = JSON.parse(localStorage.getItem("user"))
+      const res = await fetch(`${apiDomain}/agents`, {
+        headers: { Authorization: `${token}` },
+      });
+      const data = await res.json()
+      setAgents(data);
+    } catch (error) {
+      console.error("Error fetching availableListings:", error);
+    }
+  };
+  useEffect(() => {
+    getAgents()
+  }, [])
   return (
     <div>
       <div className="about_banner">
@@ -38,30 +57,28 @@ const AboutPage = () => {
       <div className="member_infos">
         <h1>Who are we?</h1>
         <div className="member_info">
-          <div className="user">
-            <img src={profile1} className="img" alt="Profile 1" />
-            <div>
-              <h2>lello Bikeyo</h2>
-              <p>FrontEnd Developer</p>
-              <p>
-                <FaTwitter />
-                <FaInstagram />
-                <FaLinkedin />
-              </p>
-            </div>
-          </div>
-          <div className="user">
-            <img src={profile2} className="img" alt="Profile 2" />
-            <div>
-              <h3>Judicious Murich</h3>
-              <p>Backend Developer</p>
-              <p>
-                <FaTwitter />
-                <FaInstagram />
-                <FaLinkedin />
-              </p>
-            </div>
-          </div>
+
+          {agents && agents.map((agent) => (
+            <>
+              <div className="user">
+                <img src={profile2} className="img" alt="Profile 2" />
+                <div>
+                  <h3>{agent.email}</h3>
+                  <h3>{agent.name}</h3>
+                  <p>{agent.contact_number}</p>
+                  <h3>{agent.profile_info}</h3>
+
+                  <p>                    <p><i className="fa fa-twitter"><FaTwitter/></i><i className="fa fa-instagram"><FaInstagram/></i><i className="fa fa-linkedin"><FaLinkedin/></i></p>
+
+                  </p>
+
+
+                </div>
+              </div>
+            </>
+
+
+          ))}
         </div>
       </div>
     </div>

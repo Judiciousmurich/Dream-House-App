@@ -1,5 +1,5 @@
 
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css'
 // import { useContext } from 'react';
 // import { Context } from '../../context/Context';
@@ -13,36 +13,45 @@ const Navbar = () => {
       <nav className="navbar">
 
         {
-          user && <Link to="/" className='active' >
+          user && <NavLink to="/" >
 
             Home
-          </Link>
+          </NavLink>
         }
         {
-          user && <Link to="/about">
+          user && <NavLink to="/about">
             About
-          </Link>
+          </NavLink>
         }
         {
-          user && <Link to="/contact" >
+          user && <NavLink to="/buy">
+            Buy
+          </NavLink>
+        }{
+          user && <NavLink to="/newlisting">
+            NewListingForm
+          </NavLink>
+        }
+        {
+          user && <NavLink to="/contact" >
             Contact Us
-          </Link>
+          </NavLink>
 
         }
 
 
 
 
-      {
-        !user &&<Link to="/register" >
-          Register
-        </Link>}
+        {
+          !user && <NavLink to="/register" >
+            Register
+          </NavLink>}
 
       </nav>
-    <div className="icons">
-     {
-      !user && <Link to="/login" className="btn">Login</Link>
-     } 
+      <div className="icons">
+        {
+          !user && <NavLink to="/login" className="btn">Login</NavLink>
+        }
         <i className="fas fa-bars" id="menu-bars"></i>
       </div>
     </header>
