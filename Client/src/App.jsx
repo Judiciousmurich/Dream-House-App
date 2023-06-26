@@ -11,7 +11,7 @@ import Register from './pages/register/Register';
 import Footer from './components/footer/Footer';
 import { useContext } from 'react';
 import { Context } from './context/Context';
-import NewListing from './pages/listingForm/NewListing';
+import NewListing from './pages/new/NewListing';
 
 const App = () => {
   // const {user} = useContext(Context);

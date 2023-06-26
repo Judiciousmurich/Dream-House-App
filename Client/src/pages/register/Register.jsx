@@ -21,7 +21,7 @@ const { register, handleSubmit, formState: { errors } } = useForm({
 });
 
 const onSubmit = (data) => {
-  Axios.post('http://localhost:8081/auth/register', data)
+  Axios.post('http://localhost:8083/auth/register', data)
   .then((response)=>{
     response.data.message && alert (response.data.message)
     navigate("/login")
