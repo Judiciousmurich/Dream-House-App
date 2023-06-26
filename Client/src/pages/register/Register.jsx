@@ -5,6 +5,8 @@ import Axios from "axios";
 import { useForm } from "react-hook-form";
 import './Register.css'
 import { AiOutlineMail } from 'react-icons/ai';
+import { RiLockPasswordLine} from 'react-icons/ri';
+import { FaUserCircle} from 'react-icons/fa';
 
 
 export default function  Register() {
@@ -37,14 +39,14 @@ const onSubmit = (data) => {
       <form onSubmit={handleSubmit(onSubmit)} >
         <h2>  Register</h2>
         <div className="input-box">
-          <span className='icon'></span>
+          <span className='icon'><FaUserCircle/></span>
           <input type="username" required="required"  {...register("username")}/>
           <label> Username:</label>
           </div>
           <p className="error">{errors.username?.message}</p>
 
           <div className="input-box">
-          <span className='icon'></span>
+          <span className='icon'> <RiLockPasswordLine/></span>
           <input type="password" required="required"   {...register("password")}/>
           <label> Password:</label>
         </div> 

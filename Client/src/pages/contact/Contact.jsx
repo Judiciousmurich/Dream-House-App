@@ -39,15 +39,16 @@ const ContactPage = () => {
       </div>
       <div className="main_contact">
         <div className="map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d891.4118309460663!2d87.29107343190547!3d26.659772156431774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef6d784e4368d7%3A0xc5b202d61919c8ae!2s8D%20Audio!5e0!3m2!1sen!2snp!4v1648541159647!5m2!1sen!2snp"
-            width="100%"
-            height="550"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.2206226128244!2d34.75716801427406!3d-0.08665449921950933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182a58aece8e9003%3A0xd7416e62f9f3ef1e!2sKisumu%2C%20Kenya!5e0!3m2!1sen!2snp!4v1648541159647!5m2!1sen!2snp"
+      width="100%"
+      height="550"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      title="Rental Location Map"
+    ></iframe>
         </div>
         <div className="contact_form">
           <form>

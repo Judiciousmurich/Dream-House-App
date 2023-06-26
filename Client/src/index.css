@@ -881,7 +881,7 @@ header .icons #menu-bars {
 .signup_image{
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to left, rgba(1, 4, 42, 0.3), rgba(0, 0, 0, 0.65)), url(../image/signup_img.jpg) no-repeat center center / cover;
+    background: linear-gradient(to left, rgba(1, 4, 42, 0.3), rgba(0, 0, 0, 0.65)), url(../src//pages//images/signup_img.jpg) no-repeat center center / cover;
     height: 100vh;
     display: flex;
     text-align: center;

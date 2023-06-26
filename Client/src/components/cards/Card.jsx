@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import featuredImage1 from '../../pages/images/feature12.jpg';
-import './card.css'
 
 const Card = ({ listing }) => {
   return (

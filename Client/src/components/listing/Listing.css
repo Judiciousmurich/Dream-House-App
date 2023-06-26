@@ -3,6 +3,7 @@
     flex-direction: column;
     text-align: center;
     padding: 5rem 7%;
+  
 }
 .featured_listing h1 {
     padding-bottom: 3.5rem;
@@ -50,6 +51,7 @@
     border-bottom: 1px solid black;
 }
 .featured_btn .btn {
+  
     padding: 1rem 2rem;
     border-radius: 3rem;
     color: white;

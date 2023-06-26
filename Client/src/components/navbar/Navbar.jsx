@@ -13,27 +13,27 @@ const Navbar = () => {
       <nav className="navbar">
 
         {
-          user && <NavLink to="/" >
+          user && <NavLink to="/" className="link" >
 
             Home
           </NavLink>
         }
         {
-          user && <NavLink to="/about">
+          user && <NavLink to="/about" className="link">
             About
           </NavLink>
         }
         {
-          user && <NavLink to="/buy">
+          user && <NavLink to="/buy" className="link">
             Buy
           </NavLink>
         }{
-          user && <NavLink to="/newlisting">
+          user && <NavLink to="/newlisting" className="link">
             NewListingForm
           </NavLink>
         }
         {
-          user && <NavLink to="/contact" >
+          user && <NavLink to="/contact" className="link">
             Contact Us
           </NavLink>
 
@@ -43,7 +43,7 @@ const Navbar = () => {
 
 
         {
-          !user && <NavLink to="/register" >
+          !user && <NavLink to="/register" className="link">
             Register
           </NavLink>}
 

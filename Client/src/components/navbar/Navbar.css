@@ -20,7 +20,7 @@ header {
     text-decoration: none;
   }
   
-  header .navbar a {
+  header .navbar.a{
     
     font-size: 1rem;
     padding: 0.5rem 1rem;
@@ -28,6 +28,7 @@ header {
     color: rgb(75, 69, 69);
     text-decoration: none;
     gap: 30px;
+    justify-content: space-around;
   }
   
   header .navbar a.active,

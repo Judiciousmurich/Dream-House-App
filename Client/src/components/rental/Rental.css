@@ -1,0 +1,36 @@
+.rental_banner {
+    /*display: flex;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2.5rem 10%;
+    background-color: #E9EAF2;
+
+}
+
+.rental_banner_img {
+    width: 100%;
+    /*background-color: #E9EAF2;*/
+    padding: 2rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.rental_banner_img img {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.rental_banner_info {
+    /*background-color: #171F2D;*/
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+.rental_banner_info h1 {
+    padding: 1rem 0rem;
+    /*color: white;*/
+    color: black;
+}

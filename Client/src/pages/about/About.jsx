@@ -40,7 +40,7 @@ const AboutPage = () => {
           <h2>Our Goals</h2>
           <p>
             We are providing free real estate marketplace for your house and
-            property where anyone can buy and sell their property without
+            property where anyone can buy their property without
             searching for a broker.
           </p>
           <p>&#10004; &nbsp; Provide Free Marketplace for your Real Estate</p>

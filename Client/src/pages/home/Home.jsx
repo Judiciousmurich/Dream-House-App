@@ -6,6 +6,7 @@ import Stats from '../../components/stats/Stats';
 import Listings from '../../components/listing/Listing';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import Rental from '../../components/rental/Rental';
 
 
 
@@ -37,7 +38,7 @@ const Hero = () => {
         <Service />
         <div className="container">
           <Listings />
-
+        <Rental/>
         </div>
 
 
