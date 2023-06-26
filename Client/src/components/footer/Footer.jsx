@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer_main">
         <div className="footer_info">
-          <h2>Realestaete</h2>
+          <h2>Realestate</h2>
           <p>judicous</p>
           <p>Admin@realestate.com</p>
           <a href="tel-phone">
@@ -18,15 +18,10 @@ const Footer = () => {
         <div className="footer_link">
           <h2>Links</h2>
           <div className="link_column">
-          <div>
-              <Link to="/">About Us</Link>
-              <Link to="/contact">Contact Us</Link>
-              <Link to="/register">Privacy Policy</Link>
-              <Link to="/login">Terms and Conditions</Link>
-            </div>
+         
               
             <div>
-              <Link to="/about">About Us</Link>
+              <Link to="/about">About </Link>
               <Link to="/contact">Contact Us</Link>
               <Link to="/register">Privacy Policy</Link>
               <Link to="/login">Terms and Conditions</Link>
@@ -42,7 +37,7 @@ const Footer = () => {
               className="email"
               placeholder="Enter your e-mail"
             />
-            <button type="submit" className='butto'>Subscribe</button>
+            <button type="submit" className='button'>Subscribe</button>
           </label>
           <div>
             <input type="checkbox" name="checkbox" className="term" /> I have read and agree to the{' '}

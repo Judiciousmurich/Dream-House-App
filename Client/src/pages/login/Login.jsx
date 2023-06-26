@@ -1,15 +1,15 @@
-import { useContext } from 'react'
+// import { useContext } from 'react'
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Axios from "axios";
-import { Context } from "../../context/Context";
+// import { Context } from "../../context/Context";
 import './Login.css'
 
 export default  function Login() {
-  const { user ,dispatch } = useContext(Context);
-  console.log(user)
+  // const { user ,dispatch } = useContext(Context);
+  // console.log(user)
 
   const navigate = useNavigate();
 
@@ -22,12 +22,16 @@ export default  function Login() {
 });
 
 const onSubmit = (data) => {
+  console.log(data)
   Axios.post('http://localhost:8081/auth/login', data)
     .then(({data}) => {
       console.log(data)
       if (data.token) {
-        dispatch({type:"LOGIN_SUCCESS",payload:data})
+        // dispatch({type:"LOGIN_SUCCESS",payload:data})
+        // localStorage.setItem("user"),data.token)
+        localStorage.setItem("user",JSON.stringify(data.token))
         navigate("/")
+
       }
     })
     .catch (({ response}) => {

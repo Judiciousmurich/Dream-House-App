@@ -1,4 +1,6 @@
 .featured_listing{
+    display: flex;
+    flex-direction: column;
     text-align: center;
     padding: 5rem 7%;
 }
@@ -7,7 +9,7 @@
     padding-bottom: 1rem;
 }
 .featured_listing .card a{
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem */
     font-size: 1.5rem;
     color: black;
     font-weight: bolder;
@@ -16,9 +18,9 @@
 .card{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.5rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    gap: 50px;
+    padding-top: 1rem;
+    /* padding-bottom: 3rem; */
     
 }
 .featured_listing .featured_listing_card{
@@ -47,3 +49,18 @@
     padding-bottom: 0.4rem;
     border-bottom: 1px solid black;
 }
+.featured_btn .btn {
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    color: white;
+    background-color: royalblue;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 black;
+    transition: ease-out 0.5s;
+    text-decoration: none;
+  }
+  
+  .featured_btn.btn:hover {
+    box-shadow: inset 30rem 0 0 0 black;
+    color: white;
+  }

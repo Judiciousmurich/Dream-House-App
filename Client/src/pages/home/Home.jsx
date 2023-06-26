@@ -1,51 +1,58 @@
-import Listings from '../../components/listing/Listing';
+// import Listings from '../../components/listing/Listing';
 import './Home.css'
+import Service from '../../components/service/Service ';
+import Stats from '../../components/stats/Stats';
+
+import Listings from '../../components/listing/Listing';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+
 
 
 const Hero = () => {
-  return (
-    <>
-    <div className="hero">
-      <div className="hero-info">
-        <h1>Discover Your Real Estate</h1>
-        <form>
-          <input className="search" type="search" placeholder="Search Location, Apartments, Complex etc" aria-label="Search" />
-          <i>
-            <button className="btn" type="submit">Search</button>
-          
-          </i>
-        </form>
-      </div>
-      
-    </div>
-    <div className="stats">
-          <div>
-            <h1>70+</h1>
-            <p>Appartments</p>
+  const navigate = useNavigate()
+  const user = JSON.parse(localStorage.getItem("user"))
+  useEffect(() => {
+    if (!user) {
+      return navigate("/login")
+    }
+  }, [user])
+  if (user) {
+    return (
+      <>
+        <div className="hero">
+          <div className="hero-info">
+            <h1>Discover Your Real Estate</h1>
+            <form>
+              <input className="search" type="search" placeholder="Search Location, Apartments, Complex etc" aria-label="Search" />
+              <i>
+                <button className="btn" type="submit">Search</button>
+
+              </i>
+            </form>
           </div>
-          <div>
-            <h1>300+</h1>
-            <p>Locations</p>
-          </div>
-          <div>
-            <h1>550+</h1>
-            <p>Happy Customers</p>
-          </div>
-          <div>
-            <h1>100+</h1>
-            <p>Properties Listed</p>
-          </div>
+
         </div>
-        <Listings/>
+        <Stats />
+        <Service />
+        <div className="container">
+          <Listings />
 
-    </>
+        </div>
 
 
-  
-      )};
+      </>
 
-  
-      
-     
-    
-export default Hero ;
+
+
+    )
+
+  }
+
+};
+
+
+
+
+
+export default Hero;

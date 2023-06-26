@@ -15,7 +15,7 @@ export const Context = createContext(INITIAL_STATE);
 export const ContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(Reducer, INITIAL_STATE);
     useEffect(() => {
-        localStorage.setItem("user", JSON.stringify(state.user))
+        // localStorage.setItem("user", JSON.stringify(state.user))
     }, [state.user])
 
     return (
@@ -23,4 +23,4 @@ export const ContextProvider = ({ children }) => {
             {children}
         </Context.Provider>
     )
-    }
+}

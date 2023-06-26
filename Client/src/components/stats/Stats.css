@@ -1,0 +1,29 @@
+.stats {
+    width: 100%;
+    text-align: center;
+    padding: 4rem 10%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .stats>div {
+    /*background-color: royalblue;*/
+    display: flex;
+    justify-content: space-around;
+    width: 160px;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .stats>div h1 {
+    font-size: 2rem;
+  }
+  
+  .stats>div p {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.50);
+  }
+  

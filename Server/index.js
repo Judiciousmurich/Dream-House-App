@@ -7,9 +7,19 @@ import cors from 'cors'
 
 const app = express();
 app.use(cors());
+
 //middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+//Enable COES middleware
+app.use(function(req, res, next){
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+    res.setHeader("Access-Control-Allow-Headers", 'GET, POST, PUT, DELETE');
+    res.setHeader("Access-Control-Allow-Headers", 'Content-Type');
+    next();
+});
+
 //jwt middleware
 app.use((req, res, next) => {
     if (req.headers && req.headers.authorization && req.headers.authorization.split(' ')[0] === 'JWT') {

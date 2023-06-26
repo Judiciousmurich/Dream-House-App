@@ -15,6 +15,9 @@ import {
 } from '../controllers/listingsController.js';
 
 import {
+  getAvailableListings
+} from '../controllers/buyControllers.js';
+import {
   getAgents,
   getAgentById,
   createAgent,
@@ -66,13 +69,16 @@ const Routes = (app) => {
     .delete(loginRequired, deleteUser);
 
   app.route('/listings')
-    .get(getListings)
-    .post(createListing);
+    .get(loginRequired, getListings)
+    .post(loginRequired, createListing);
 
   app.route('/listings/:id')
     .get(getListingById)
     .put(updateListing)
     .delete(deleteListing);
+
+    app.route('/available')
+    .get(getAvailableListings)
 
   app.route('/agents')
     .get(getAgents)
