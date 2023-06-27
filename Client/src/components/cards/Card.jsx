@@ -8,7 +8,7 @@ const Card = ({ listing }) => {
       <div className="featured_listing_card_info">
         <div className="property_title">
           <Link to="/">{listing.title}</Link>
-          <h2>${listing.price}</h2>
+          <h2 className='price'>${listing.price}</h2>
         </div>
         <p>{listing.description}</p>
         <hr />

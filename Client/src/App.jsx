@@ -12,6 +12,9 @@ import Footer from './components/footer/Footer';
 import { useContext } from 'react';
 import { Context } from './context/Context';
 import NewListing from './pages/new/NewListing';
+import NotFound from './pages/notfound/NotFound';
+import Property from './pages/property/Product';
+import Product from './pages/property/Product';
 
 const App = () => {
   // const {user} = useContext(Context);
@@ -25,6 +28,8 @@ const App = () => {
         <Route path="/about" element={ <About /> } />
         <Route path="/contact" element={ <Contact /> } />
         <Route path="/newlisting" element={ <NewListing /> } />
+        <Route path="/notfound" element={ <NotFound /> } />
+        <Route path="/product" element={ <Product/> } />
         <Route path="/buy" element={<Buy/>} />
         <Route path="/login" element={<Login /> } />
         <Route path="/register" element={<Register />} />

@@ -14,50 +14,34 @@ header {
   }
   
   header .logo {
+    
     font-size: 2rem;
     font-weight: bolder;
     color: black;
     text-decoration: none;
   }
   
-  header .navbar.a{
+  header .navbar{
     
     font-size: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 3rem;
     color: rgb(75, 69, 69);
     text-decoration: none;
-    gap: 30px;
-    justify-content: space-around;
+    gap: 40px;
+    justify-content: space-between;
   }
   
-  header .navbar a.active,
-  header .navbar a:hover {
+  header .navbar .active,
+  header .navbar :hover {
     color: #fff;
     background: royalblue;
-    gap: 20px;
+  
+    gap: 30px;
+    
   }
   
-  header .icons a {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 3rem;
-    color: white;
-    background-color: royalblue;
-    text-decoration: none;
-  }
-  
-  header .icons i {
-    cursor: pointer;
-    margin-left: 0.5rem;
-    height: 1.5rem;
-    line-height: 1.5rem;
-    width: 1.5rem;
-    text-align: center;
-    font-size: 1rem;
-    border-radius: 50%;
-    background: #eee;
-  }
+
   
   header .icons i:hover {
     color: #fff;

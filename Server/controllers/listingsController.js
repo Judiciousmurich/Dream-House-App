@@ -111,3 +111,4 @@ export const getListings = async (req, res) => {
     }
   };
   
+// Search listings by keyword

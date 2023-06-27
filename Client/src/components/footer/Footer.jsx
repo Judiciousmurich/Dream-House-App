@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer_secondary">
-        <p>Realesto &copy; 2022. All rights reserved.</p>
+        <p>Realestate &copy; 2023. All rights reserved.</p>
         <p>
             <i><FaTwitter /></i>
           <i><FaInstagram /></i>

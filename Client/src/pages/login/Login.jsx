@@ -1,6 +1,6 @@
 // import { useContext } from 'react'
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Axios from "axios";
@@ -61,8 +61,8 @@ const onSubmit = (data) => {
         </div>
         <p>{errors.password?.message}</p>
         <div className="links">
-          <a href="#">Forgot Password?</a>
-          <a href="#">Sign up</a>
+        <Link to="/forgot-password">Forgot Password?</Link>
+      <Link to="/signup">Sign up</Link>
         
         </div>
         <input type="submit" value="Submit" />

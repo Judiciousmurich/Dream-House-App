@@ -1,0 +1,13 @@
+.e404_info {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.e404_info img{
+    padding: 2rem;
+}
+.e404_info p{
+    padding: 1rem;
+}

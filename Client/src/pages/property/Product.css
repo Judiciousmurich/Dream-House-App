@@ -1,0 +1,45 @@
+
+.outer-slider{
+    text-align: center;
+    padding: 1rem 7%;
+    margin-top: 10vh;
+}
+.product_info{
+    padding: 1rem 7% 6rem 7%;
+    color: black;
+}
+
+.product_info .property_feature{
+    align-items: center;
+    display: flex;
+}
+.product_info h3{
+    padding: 2rem 0rem;
+}
+.product_info .property_features{
+    border-radius: 20px;
+}
+
+.product_info .property_feature{
+    background-color: #DBF6FE;
+    border-bottom: 2px solid black;
+    border-radius: 5px;
+}
+.product_info .product_contact h3{
+    padding: 3rem 0rem 1rem 0rem;
+}
+.product_info .product_contact p{
+    padding: 2rem;
+    background-color: #edd1b9;
+}
+.product_info .product_contact p a{
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+    text-decoration: underline;
+}
+
+.item {
+    display: flex;
+  
+}
