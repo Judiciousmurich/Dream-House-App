@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import "./NewListing.css";
+import { apiDomain } from "../../utils/utilsDomain";
 
 
 
@@ -25,9 +26,16 @@ const ListingForm = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
+  const onSubmit =async(data) => {
     console.log(data);
+    const res =await fetch(apiDomain + 'listings' , {
+      method: "POST",
+      headers: {
+        "Application-Type": ""
+      }
+    })
   };
+
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="newlistingform">

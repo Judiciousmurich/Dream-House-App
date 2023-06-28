@@ -24,6 +24,7 @@
 
 .hero .hero-info form {
   display: flex;
+  border: 1px solid red;
 }
 
 .hero .hero-info form .search {

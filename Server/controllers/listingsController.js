@@ -14,6 +14,7 @@ export const getListings = async (req, res) => {
     }
   };
   
+  // ++++++++++++++++++++++++++++++++++++++++++++++++++++=
   // Get a single listing by ID
   export const getListingById = async (req, res) => {
     const listingId = req.params.id;

@@ -53,8 +53,6 @@ const Buy = () => {
         <div className="card">
           {availableListings && availableListings.map((listing) => (
             <>
-
-
               <Card listing={listing} />
 
             </>

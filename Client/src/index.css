@@ -129,7 +129,7 @@ header .icons #menu-bars {
 .hero .hero-info form {
     display: flex;
     gap: 20px;
-    padding: 4rem 4rem;
+    
 }
 
 .hero .hero-info form .search {
@@ -145,7 +145,7 @@ header .icons #menu-bars {
     font-size: 1rem;
     background-color: royalblue;
     cursor: pointer;
-
+    height: 100%;
     box-shadow: inset 0 0 0 0 black;
     transition: ease-out 0.5s;
 }
@@ -1195,13 +1195,27 @@ header .icons #menu-bars {
 .buy_banner form {
     margin-top: 1rem;
     display: flex;
+    gap: 1rem;
+   
 }
 
 .buy_banner form .search {
     padding: 1rem 2rem;
     border-radius: 3rem;
     width: 80%;
+    height: 100%;
 }
+.buy_banner form .btn{
+    border-radius: 3rem;
+color: white;
+font-size: 1rem;
+background-color: royalblue;
+cursor: pointer;
+height: 100%;
+box-shadow: inset 0 0 0 0 black;
+transition: ease-out 0.5s;
+}
+
 
 
 /*************************************Sell Page starts here********************************/

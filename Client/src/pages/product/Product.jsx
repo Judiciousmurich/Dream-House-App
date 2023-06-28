@@ -8,41 +8,36 @@ import washroomIcon from '../images/washroom.png';
 import garageIcon from '../images/garage.png';
 import './Product.css'
 
-const Product = () => {
+const Product = ({ listing }) => {
   return (
-    <div>
+    listing.map((list) => (<div>
       <div className="outer-slider">
         <div className="owl-carousel owl-theme">
           <div className="item">
-            <img src={productImage1} alt="Product Image" style={{height:'50vh',width:'50vw'}}/>
-            <img src={productImage2} alt="Product Image" style={{height:'50vh',width:'50vw'}} />
+            <img src={productImage1} alt="Product Image" style={{ height: '50vh', width: '50vw' }} />
+            <img src={productImage2} alt="Product Image" style={{ height: '50vh', width: '50vw' }} />
           </div>
-        
+
           <div className="item">
-            <img src={productImage3} alt="Product Image" className='product-img1' style={{height:'50vh',width:'50vw'}} />
-            <img src={productImage6} alt="Product Image"className='product-img1'style={{height:'50vh',width:'50vw'}}  />
-            
+            <img src={productImage3} alt="Product Image" className='product-img1' style={{ height: '50vh', width: '50vw' }} />
+            <img src={productImage6} alt="Product Image" className='product-img1' style={{ height: '50vh', width: '50vw' }} />
+
           </div>
-        
+
           {/* <div className="item">
             <img src={productImage1} alt="Product Image" />
           </div> */}
         </div>
       </div>
       <div className="product_info">
-        <h2 style={{color:"black",  padding: "2rem 0rem", fontWeight:"bold",fontSize:"1.5rem"}}>Sophisticated Two Bedroom plus Study in Luxurious One30 Hyde Park</h2>
+        <h2 style={{ color: "black", padding: "2rem 0rem", fontWeight: "bold", fontSize: "1.5rem" }}>Sophisticated Two Bedroom plus Study in Luxurious One30 Hyde Park</h2>
         <br />
         <h3>Location:</h3>
-        <p>2202/130 Elizabeth Street, Sydney</p>
+        <p>{list.location}</p>
         <br />
+        <h3>Description</h3>
         <p>
-          Exuding sophisticated grandeur and timeless charm, this elegant
-          two-bedroom plus study apartment boasts breathtaking views over Hyde
-          Park, St Mary’s Cathedral, and the city skyline. Meticulously designed
-          by Bates Smart architects, in a joint development between Aoyuan
-          International and Ecove Group, ‘One30 Hyde Park’ showcases premium
-          quality fixtures and fittings, mirrored by magnificent northern views
-          and positioned in Sydney’s premium residential dress circle.
+          {list.description}
         </p>
         <h3>Defining Features</h3>
         <ul>
@@ -95,7 +90,8 @@ const Product = () => {
           <p>You need to <a href="/login">Login</a> first in order to schedule a visit.</p>
         </div>
       </div>
-    </div>
+    </div>))
+
   );
 };
 

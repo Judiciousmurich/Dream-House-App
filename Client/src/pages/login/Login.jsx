@@ -62,7 +62,7 @@ const onSubmit = (data) => {
         <p>{errors.password?.message}</p>
         <div className="links">
         <Link to="/forgot-password">Forgot Password?</Link>
-      <Link to="/signup">Sign up</Link>
+      <Link to="/register">Sign up</Link>
         
         </div>
         <input type="submit" value="Submit" />

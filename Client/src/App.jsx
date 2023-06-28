@@ -13,8 +13,9 @@ import { useContext } from 'react';
 import { Context } from './context/Context';
 import NewListing from './pages/new/NewListing';
 import NotFound from './pages/notfound/NotFound';
-import Property from './pages/property/Product';
-import Product from './pages/property/Product';
+import Property from './pages/product/Product';
+import Product from './pages/product/Product';
+import HouseDetails from './pages/housedetails/HouseDetails';
 
 const App = () => {
   // const {user} = useContext(Context);
@@ -24,18 +25,19 @@ const App = () => {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={ <Home />} />
-        <Route path="/about" element={ <About /> } />
-        <Route path="/contact" element={ <Contact /> } />
-        <Route path="/newlisting" element={ <NewListing /> } />
-        <Route path="/notfound" element={ <NotFound /> } />
-        <Route path="/product" element={ <Product/> } />
-        <Route path="/buy" element={<Buy/>} />
-        <Route path="/login" element={<Login /> } />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/newlisting" element={<NewListing />} />
+        <Route path="/notfound" element={<NotFound />} />
+        {/* <Route path="/product" element={ <Product/> } /> */}
+        <Route path="/details/:id" element={<HouseDetails />} />
+        <Route path="/buy" element={<Buy />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-      
+
       </Routes>
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   );
 };
