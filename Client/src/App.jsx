@@ -13,9 +13,8 @@ import { useContext } from 'react';
 import { Context } from './context/Context';
 import NewListing from './pages/new/NewListing';
 import NotFound from './pages/notfound/NotFound';
-import Property from './pages/product/Product';
-import Product from './pages/product/Product';
 import HouseDetails from './pages/housedetails/HouseDetails';
+import UpdateForm from './pages/updateForm/UpdateForm';
 
 const App = () => {
   // const {user} = useContext(Context);
@@ -30,7 +29,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/newlisting" element={<NewListing />} />
         <Route path="/notfound" element={<NotFound />} />
-        {/* <Route path="/product" element={ <Product/> } /> */}
+        <Route path="/update/:id" element={<UpdateForm />} />
         <Route path="/details/:id" element={<HouseDetails />} />
         <Route path="/buy" element={<Buy />} />
         <Route path="/login" element={<Login />} />

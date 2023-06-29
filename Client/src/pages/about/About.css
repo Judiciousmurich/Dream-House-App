@@ -1,4 +1,4 @@
-.about_banner {
+/* .about_banner{
   height: 40vh;
   margin-top: 10vh;
   background-position: center;
@@ -6,77 +6,65 @@
   justify-content: center;
   align-items: center;
   display: flex;
-  background-image: linear-gradient(to bottom, rgba(1, 4, 42, 0.3), rgba(0, 0, 0, 0.5)),
-    url(../image/contact_banner.jpg);
+  background-image: linear-gradient(to bottom, rgba(1, 4, 42, 0.3), rgba(0, 0, 0, 0.5)), url(../src/pages/images/contact_banner.jpg);
 }
-
-.about_banner > div {
+.about_banner > div{
   color: white;
 }
-
-.about_banner > div i {
+.about_banner > div i{
   padding-top: 1.5rem;
   font-weight: 1000;
   text-decoration: none;
 }
-
-.about_banner > div i a {
+.about_banner > div i a{
   text-decoration: none;
   color: white;
   font-weight: bolder;
 }
-
-.goals_info {
+.goals_info{
   padding: 5rem 7%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   align-items: center;
 }
-
-.goals_info .goals {
+.goals_info .goals{
   line-height: 2;
 }
-
-.goals_info .goal_img {
+.goals_info .goal_img{
   text-align: center;
 }
-
-.member_infos {
+.member_infos{
   padding: 3rem 7%;
-  background-color: #e9ebf3;
+  background-color: #E9EBF3;
 }
-
-.member_infos h1 {
+.member_infos h1{
   text-align: center;
   padding-bottom: 2rem;
 }
-
-.member_info {
+.member_info{
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-around;
   align-items: center;
   text-align: center;
 }
-
-.member_info .user {
+.member_info .user{
   padding: 2rem;
 }
-
-.member_info .user img {
-  height: 180px;
-  width: 180px;
+.member_info .user img{
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
-  margin-bottom: 1rem;
-}
+  
 
-.member_info .user p {
-  padding-top: 0.3rem;
+}
+.member_info .user p{
+  padding-top: .3rem;
   color: steelblue;
 }
 
-.member_info .user p i {
+.member_info .user p i{
   cursor: pointer;
   padding: 0.5rem;
   margin: 0.5rem;
@@ -84,8 +72,7 @@
   background-color: royalblue;
   color: white;
 }
-
-.member_info .user p i:hover {
+.member_info .user p i:hover{
   color: white;
   background-color: black;
-}
+} */

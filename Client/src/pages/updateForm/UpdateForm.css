@@ -1,0 +1,51 @@
+.newlistingform {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top:  10%;
+    background-color: #f5f5f5;
+  
+  } 
+  
+  .newlistingform h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .newlistingform div {
+    margin-bottom: 15px;
+  }
+  
+  .newlistingform label {
+    font-weight: bold;
+  }
+  
+  .newlistingform input[type="text"],
+  .newlistingform textarea,
+  .newlistingform select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .newlistingform select[multiple] {
+    height: 100px;
+  }
+  
+  .newlistingform button{
+    background-color: royalblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .newlistingform button:hover {
+    background-color: royalblue;
+  }
+  

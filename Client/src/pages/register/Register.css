@@ -10,8 +10,7 @@ section{
   justify-content: center;
   align-items: center;
   width:100% ;
-  /* margin-top: 5%; */
-  padding-top:5% ;
+   margin-top: 4%; 
   height: 90vh;
   background: url('../images//bg.jpg') no-repeat;
   background-size: cover;

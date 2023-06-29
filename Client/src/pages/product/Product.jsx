@@ -1,4 +1,3 @@
-
 import productImage1 from '../images/feature5.jpg';
 import productImage2 from '../images/feature4.jpg';
 import productImage3 from '../images/floor_plan.png';
@@ -32,12 +31,24 @@ const Product = ({ listing }) => {
       <div className="product_info">
         <h2 style={{ color: "black", padding: "2rem 0rem", fontWeight: "bold", fontSize: "1.5rem" }}>Sophisticated Two Bedroom plus Study in Luxurious One30 Hyde Park</h2>
         <br />
+        <h3>Title</h3>
+        <p>
+          {list.title}
+        </p>
         <h3>Location:</h3>
         <p>{list.location}</p>
         <br />
         <h3>Description</h3>
         <p>
           {list.description}
+        </p>
+        <h3>Price</h3>
+        <p>
+          {list.price}
+        </p>
+        <h3>Amenities</h3>
+        <p>
+          {list.amenities}
         </p>
         <h3>Defining Features</h3>
         <ul>
