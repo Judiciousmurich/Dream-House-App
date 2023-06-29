@@ -74,9 +74,9 @@ export const getListings = async (req, res) => {
         .input('description', sql.VarChar, description)
         .input('price', sql.Decimal, price)
         .input('location', sql.VarChar, location)
-        .input('images', sql.VarChar, images)
-        .input('amenities', sql.VarChar, amenities)
-        .query('UPDATE Listings SET title = @title, description = @description, price = @price, location = @location, images = @images, amenities = @amenities WHERE id = @listingId');
+        // .input('images', sql.VarChar, images)
+        // .input('amenities', sql.VarChar, amenities)
+        .query('UPDATE Listings SET title = @title, description = @description, price = @price, location = @location WHERE id = @listingId');
   
       res.status(200).json({ message: 'Listing updated successfully' });
     } catch (error) {
