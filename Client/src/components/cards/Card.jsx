@@ -28,15 +28,17 @@ const Card = ({ listing }) => {
   }
   return (
     <div className="featured_listing_card" >
-      <img src={images[listing.id - 20]} alt={`Property ${listing.id}`} />
-      <div className="featured_listing_card_info" onClick={() => seeMoreDetails(listing.id)}>
+      <img src={images[listing.id - 20]} alt={`Property ${listing.id}`} onClick={() => seeMoreDetails(listing.id)} />
+      <div className="featured_listing_card_info" >
         <div className="property_title">
           <Link to="/">{listing.title}</Link>
           <h2 className='price'>${listing.price}</h2>
 
         </div>
       </div>
-      <button onClick={() => updateListing(listing.id)}>Update</button>
+      <div>
+        <button onClick={() => updateListing(listing.id)}>Update</button>
+      </div>
     </div>
 
   );

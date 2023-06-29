@@ -6,8 +6,7 @@ import "./UpdateForm.css";
 import { apiDomain } from "../../utils/utilsDomain";
 import { useParams } from "react-router-dom";
 
-
-
+import  './UpdateForm.css'
 
 const schema = yup.object().shape({
   title: yup.string().required("Title is required"),
@@ -67,7 +66,6 @@ const UpdateForm = () => {
       body: JSON.stringify(data)
     })
     const dataFromServer = await res.json()
-    console.log(dataFromServer);
     return dataFromServer
   };
 
@@ -110,7 +108,12 @@ const UpdateForm = () => {
         </select>
         {errors.amenities && <p>{errors.amenities.message}</p>}
       </div>
-      <button type="submit">Update</button>
+      <button type="submit" className="btn-update" style={{backgroundColor: "royalblue",
+    color: "white",
+    border: "none",
+    padding: "10px 20px",
+    borderRadius: "4px",
+    cursor: "pointer"}}>Update</button>
     </form>
   );
 };
