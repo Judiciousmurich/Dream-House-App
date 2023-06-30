@@ -1,1 +1,1 @@
-export const apiDomain = "http://localhost:8083";
+export const apiDomain = "https://real-estate-app.azurewebsites.net/";
