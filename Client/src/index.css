@@ -288,6 +288,8 @@ header .icons #menu-bars {
     width: 100%;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+
   }
   
   .featured_listing .featured_listing_card:hover {
@@ -1133,6 +1135,8 @@ header .icons #menu-bars {
 .member_infos{
     padding: 3rem 7%;
     background-color: #E9EBF3;
+ 
+ 
 }
 .member_infos h1{
     text-align: center;

@@ -1,78 +1,79 @@
 .featured_listing {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 5rem 7%;
-  }
-  
-  .featured_listing h1 {
-    padding-bottom: 3.5rem;
-    padding-bottom: 1rem;
-  }
-  
-  .featured_listing .card a {
-    font-size: 1.5rem;
-    color: black;
-    font-weight: bolder;
-  }
-  
-  .card {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 50px;
-    padding-top: 1rem;
-  }
-  
-  .featured_listing .featured_listing_card {
-    width: 100%;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  }
-  
-  .featured_listing .featured_listing_card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
-  }
-  
-  .featured_listing .featured_listing_card img {
-    width: 100%;
-    border-radius: 6px;
-  }
-  
-  .featured_listing .featured_listing_card .featured_listing_card_info {
-    background-color: whitesmoke;
-    text-align: left;
-    padding: 0.5rem;
-  }
-  
-  .featured_listing .featured_listing_card .featured_listing_card_info .property_title {
-    display: flex;
-    justify-content: space-between;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 5rem 7%;
+}
+
+.featured_listing h1 {
+  padding-bottom: 3.5rem;
+  padding-bottom: 1rem;
+}
+
+.featured_listing .card a {
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bolder;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  padding-top: 1rem;
+}
+
+.featured_listing .featured_listing_card {
+  width: 100%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
+
+}
+
+.featured_listing .featured_listing_card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.featured_listing .featured_listing_card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.featured_listing .featured_listing_card .featured_listing_card_info {
+  background-color: whitesmoke;
+  text-align: left;
+  padding: 0.5rem;
+}
+
+.featured_listing .featured_listing_card .featured_listing_card_info .property_title {
+  display: flex;
+  justify-content: space-between;
+}
+
  .price {
-    color: black;
-  }
-  
-  .featured_listing .featured_listing_card .featured_listing_card_info p {
-    padding-bottom: 0.4rem;
-    border-bottom: 1px solid black;
-  }
-  
-  .featured_btn .btn {
-    padding: 1rem 2rem;
-    border-radius: 3rem;
-    color: white;
-    font-size: 14px;
-    background-color: royalblue;
-    cursor: pointer;
-    box-shadow: inset 0 0 0 0 black;
-    transition: ease-out 0.5s;
-    text-decoration: none;
-  }
-  
-  .featured_btn.btn:hover {
-    box-shadow: inset 30rem 0 0 0 black;
-    color: white;
-  }
-  
+  color: black;
+}
+
+.featured_listing .featured_listing_card .featured_listing_card_info p {
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid black;
+}
+
+.featured_btn .btn {
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  color: white;
+  background-color: royalblue;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 black;
+  transition: ease-out 0.5s;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.featured_btn.btn:hover {
+  box-shadow: inset 30rem 0 0 0 black;
+  color: white;
+}

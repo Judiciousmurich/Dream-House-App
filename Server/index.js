@@ -13,12 +13,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //Enable COES middleware
-app.use(function(req, res, next){
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
-    res.setHeader("Access-Control-Allow-Headers", 'GET, POST, PUT, DELETE');
-    res.setHeader("Access-Control-Allow-Headers", 'Content-Type');
-    next();
-});
+// app.use(function(req, res, next){
+//     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');
+//     res.setHeader("Access-Control-Allow-Headers", 'GET, POST, PUT, DELETE');
+//     res.setHeader("Access-Control-Allow-Headers", 'Content-Type');
+//     next();
+// });
 
 //jwt middleware
 app.use((req, res, next) => {
@@ -40,6 +40,6 @@ app.get('/', (req, res) => {
     res.send("Efficient,Comprehensive,User-friendly Real-Esate API!");
 });
 
-app.listen(config.port, () => {
-    console.log(`Server is running on ${config.url}`);
+app.listen(config.port || 5000, () => {
+    console.log("Server is running on " );
 });

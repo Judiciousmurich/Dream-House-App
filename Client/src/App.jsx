@@ -17,14 +17,14 @@ import HouseDetails from './pages/housedetails/HouseDetails';
 import UpdateForm from './pages/updateForm/UpdateForm';
 
 const App = () => {
-  // const {user} = useContext(Context);
+   const {user} = useContext(Context);
 
   return (
     <BrowserRouter>
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element= {user ?<Home /> :<Login/>} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/newlisting" element={<NewListing />} />
@@ -32,7 +32,7 @@ const App = () => {
         <Route path="/update/:id" element={<UpdateForm />} />
         <Route path="/details/:id" element={<HouseDetails />} />
         <Route path="/buy" element={<Buy />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={!user ?<Login /> : <Home/>} />
         <Route path="/register" element={<Register />} />
 
       </Routes>

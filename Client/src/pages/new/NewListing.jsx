@@ -26,12 +26,12 @@ const ListingForm = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit =async(data) => {
+  const onSubmit = async (data) => {
     console.log(data);
-    const res =await fetch(apiDomain + 'listings' , {
+    const res = await fetch(apiDomain + 'listings', {
       method: "POST",
       headers: {
-        "Application-Type": ""
+        "Content-Type": "application/json",
       }
     })
   };

@@ -1,15 +1,16 @@
+.featured_btn .btn {
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  color: white;
+  background-color: royalblue;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 black;
+  transition: ease-out 0.5s;
+  text-decoration: none;
+  font-size: 14px;
+}
 
-  
-  .btn-update{
-    background-color: royalblue;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .btn-update:hover {
-    background-color: royalblue;
-  }
-  
+.featured_btn.btn:hover {
+  box-shadow: inset 30rem 0 0 0 black;
+  color: white;
+}

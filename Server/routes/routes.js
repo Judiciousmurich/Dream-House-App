@@ -70,7 +70,7 @@ const Routes = (app) => {
 
   app.route('/listings')
     .get(loginRequired, getListings)
-    .post(loginRequired, createListing);
+    .post (createListing);
 
   app.route('/listings/:id')
     .get(getListingById)

@@ -1,4 +1,4 @@
-/* .about_banner{
+.about_banner{
   height: 40vh;
   margin-top: 10vh;
   background-position: center;
@@ -37,6 +37,8 @@
 .member_infos{
   padding: 3rem 7%;
   background-color: #E9EBF3;
+
+
 }
 .member_infos h1{
   text-align: center;
@@ -56,14 +58,22 @@
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  
+  object-fit: cover;
+  /* margin-bottom: 1 rem; */
+
 
 }
 .member_info .user p{
   padding-top: .3rem;
   color: steelblue;
 }
-
+/*.member_info .user p i{
+  padding: .5rem;
+  font-size: 25px;
+}
+.member_info .user p i: hover{
+  color: blue;
+}*/
 .member_info .user p i{
   cursor: pointer;
   padding: 0.5rem;
@@ -75,4 +85,4 @@
 .member_info .user p i:hover{
   color: white;
   background-color: black;
-} */
+}

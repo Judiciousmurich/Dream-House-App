@@ -45,16 +45,18 @@
 }
 
   
-.btn-delete{
-    background-color: royalblue;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .btn-delete:hover {
-    background-color: royalblue;
-  }
+
+ .btngg{
+    padding: "1rem 2rem";
+    border-radius: "3rem";
+  color: "white";
+  background-color: "royalblue";
+  cursor: "pointer";
+  box-shadow: "inset 0 0 0 0 black";
+  transition: "ease-out 0.5s";
+  text-decoration: "none";
+  font-size: "14px";
+  margin: 0 auto;
+}
+
   

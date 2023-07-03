@@ -7,11 +7,12 @@ import washroomIcon from '../images/washroom.png';
 import garageIcon from '../images/garage.png';
 import './Product.css'
 import { useParams } from 'react-router-dom';
+import { apiDomain } from '../../utils/utilsDomain';
 
 const Product = ({ listing }) => {
   const { id } = useParams()
   const deleteProduct = async (id) => {
-    const res = await fetch("http://localhost:8083/listings/" + id, { method: "DELETE" })
+    const res = await fetch(`${apiDomain}listings/${id}`, { method: "DELETE" })
     const data = await res.json()
     return data
   }
@@ -108,9 +109,11 @@ const Product = ({ listing }) => {
           <p>You need to <a href="/login">Login</a> first in order to schedule a visit.</p>
         </div>
       </div>
-      <div className='btn-delete' onClick={() => deleteProduct(id)}><button>DELETE</button></div>
-    </div>))
-
+      <div className='featured-btn'> 
+      <div  onClick={() => deleteProduct(id)}><button className='btngg'style={{color:"red", fontSize:"16px",fontWeight:"bold"}}> DELETE</button></div>
+    </div></div>
+     
+    ))
   );
 };
 

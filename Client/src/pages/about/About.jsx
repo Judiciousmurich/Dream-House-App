@@ -42,7 +42,14 @@ const AboutPage = () => {
 
   return (
     <div>
-      {/* Rest of your code */}
+       <div className="about_banner">
+        <div>
+          <h1>About Us</h1>
+          <i>
+          <Link to="/">Home</Link> / About Us
+          </i>
+        </div>
+      </div>
 
       <div className="member_infos">
         <h1>Who are we?</h1>

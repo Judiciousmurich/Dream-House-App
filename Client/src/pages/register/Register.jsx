@@ -15,10 +15,17 @@ export default function Register() {
   const navigate = useNavigate();
 
   const schema = yup.object().shape({
-    username: yup.string().required("Username is required"),
-    email: yup.string().required("Email is required"),
-    password: yup.string().required("Password is required"),
-  });
+  username: yup.string().required("Username is required " ),
+  email: yup.string().required("Email is required"),
+  password: yup
+    .string()
+    .required("Password is required")
+    .matches(
+      /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+      "Password must contain at least 8 characters, one letter, one number, and one special character"
+    ),
+});
+
 
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema),
@@ -52,7 +59,7 @@ export default function Register() {
             <input type="password" required="required"   {...register("password")} />
             <label> Password:</label>
           </div>
-          <p className="error">{errors.password?.message}</p>
+          <p className="error" style={{color:"red"}} >{errors.password?.message}</p>
 
           <div className="input-box">
             <span className='icon'>< AiOutlineMail /></span>

@@ -10,6 +10,7 @@ section{
   justify-content: center;
   align-items: center;
   width:100% ;
+  padding-top: 0.7rem;
    margin-top: 4%; 
   height: 90vh;
   background: url('../images//bg.jpg') no-repeat;
@@ -26,8 +27,9 @@ section{
 
 .login-box{
   position: relative;
+  padding: 12px;
   width: 400px;
-  height: 450px;
+  /* height: 500px; */
   background:transparent;
   border: 2px solid  rgba(255, 255, 255, .5);
   border-radius: 20px;
@@ -48,7 +50,7 @@ h2{
 .input-box{
   position: relative;
 border-bottom:2px solid #fff ;
-  width: 310px;
+
   margin: 30px 0;
 }
 
@@ -140,3 +142,4 @@ button{
     width: 290px;
   }
 }
+
