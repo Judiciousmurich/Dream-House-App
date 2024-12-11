@@ -43,6 +43,4 @@ Mobile responsiveness for enhanced accessibility.
 ## 👩‍💻 Developer
 Developed by Judith Muthui.
 
-Email: murichjudicious45@gmail.com
-LinkedIn: Judith Muthui
-GitHub: Judiciousmurich
+
