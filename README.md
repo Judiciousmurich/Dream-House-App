@@ -1,5 +1,5 @@
 # Dream-House-App
-### The Dream-House-App database schema is designed to support a real estate application for browsing, managing, and visualizing property listings. It incorporates essential entities such as users, property listings, agents, and locations to ensure a seamless experience for users and administrators.
+The Dream-House-App database schema is designed to support a real estate application for browsing, managing, and visualizing property listings. It incorporates essential entities such as users, property listings, agents, and locations to ensure a seamless experience for users and administrators.
 
 
 ![image](https://github.com/user-attachments/assets/afdc5ed2-2571-4f25-89e5-02adcdd31719)
@@ -7,7 +7,7 @@
 
 # Key Features
 ## 1. User Management
-### Secure user accounts with authentication.
+Secure user accounts with authentication.
 Personalized experiences based on user profiles.
 ## 2. Property Listings
 Comprehensive details for each property, including:
