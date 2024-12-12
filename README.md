@@ -34,7 +34,7 @@ RESTful APIs for seamless communication between the frontend and backend.
 ##### Frontend: React
 ##### Backend: Node.js, Express
 ##### Database: MSSQL
-##### API: RESTful architecture
+##### API: RESTful-API
 #####  Future Enhancements
 Integration of a booking system for property visits.
 Advanced filtering options for a more personalized experience.
