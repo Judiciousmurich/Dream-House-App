@@ -30,12 +30,12 @@ Search properties based on keywords, price, location, and amenities.
 ## 6. Data Security & Efficiency
 Reliable database design using MSSQL.
 RESTful APIs for seamless communication between the frontend and backend.
-## 🛠️ Built With
+## 🛠 Built With
 ##### Frontend: React
 ##### Backend: Node.js, Express
 ##### Database: MSSQL
 ##### API: RESTful architecture
-##### 🚀 Future Enhancements
+#####  Future Enhancements
 Integration of a booking system for property visits.
 Advanced filtering options for a more personalized experience.
 User reviews and agent ratings for improved decision-making.
